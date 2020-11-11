@@ -15,7 +15,7 @@ import java.io.Serializable;
 public class ApiResult<T> implements Serializable {
 
     private boolean success;
-    private String code;
+    private int code;
     private String msg;
     private T data;
     private Long systemTime;
@@ -25,7 +25,7 @@ public class ApiResult<T> implements Serializable {
         this.systemTime = System.currentTimeMillis();
     }
 
-    private ApiResult(boolean success, String code, String msg, T data) {
+    private ApiResult(boolean success, int code, String msg, T data) {
         this.success = success;
         this.code = code;
         this.msg = msg;
@@ -33,7 +33,7 @@ public class ApiResult<T> implements Serializable {
         this.systemTime = System.currentTimeMillis();
     }
 
-    private ApiResult(boolean success, String code, String msg) {
+    private ApiResult(boolean success, int code, String msg) {
         this.success = success;
         this.code = code;
         this.msg = msg;
@@ -45,14 +45,14 @@ public class ApiResult<T> implements Serializable {
     }
 
     public static <T> ApiResult<T> ofSuccess(T data) {
-        return new ApiResult<T>(true, "", "", data);
+        return new ApiResult<T>(true, -1, "", data);
     }
 
-    public static ApiResult<String> failure(String code, String msg) {
-        return new ApiResult<String>(false, code, code);
+    public static ApiResult<String> failure(int code, String msg) {
+        return new ApiResult<String>(false, code, msg);
     }
 
-    public static <T> ApiResult<T> failure(String code, String msg, T data) {
+    public static <T> ApiResult<T> failure(int code, String msg, T data) {
         return new ApiResult<T>(false, code, msg, data);
     }
 

@@ -8,16 +8,16 @@
     <artifactId>common</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <!--    <distributionManagement>-->
-    <!--        <repository>-->
-    <!--            <id>rdc-releases</id>-->
-    <!--            <url>https://packages.aliyun.com/maven/repository/2012141-release-BbZuy6/</url>-->
-    <!--        </repository>-->
-    <!--        <snapshotRepository>-->
-    <!--            <id>rdc-snapshots</id>-->
-    <!--            <url>https://packages.aliyun.com/maven/repository/2012141-snapshot-oEXfjI/</url>-->
-    <!--        </snapshotRepository>-->
-    <!--    </distributionManagement>-->
+<!--        <distributionManagement>-->
+<!--            <repository>-->
+<!--                <id>rdc-releases</id>-->
+<!--                <url>https://packages.aliyun.com/maven/repository/2012141-release-BbZuy6/</url>-->
+<!--            </repository>-->
+<!--            <snapshotRepository>-->
+<!--                <id>rdc-snapshots</id>-->
+<!--                <url>https://packages.aliyun.com/maven/repository/2012141-snapshot-oEXfjI/</url>-->
+<!--            </snapshotRepository>-->
+<!--        </distributionManagement>-->
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>

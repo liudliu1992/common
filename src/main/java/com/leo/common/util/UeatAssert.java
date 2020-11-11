@@ -3,7 +3,6 @@ package com.leo.common.util;
 import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.core.util.ArrayUtil;
 import com.leo.common.exception.LeoException;
-import com.sun.istack.internal.Nullable;
 import com.leo.common.error.IErrorCode;
 
 import java.util.Collection;
@@ -36,27 +35,27 @@ public class UeatAssert {
     }
 
 
-    public static void isNull(@Nullable Object object, IErrorCode message) {
+    public static void isNull( Object object, IErrorCode message) {
         if (object != null) {
             throw new LeoException(message);
         }
     }
 
 
-    public static void notNull(@Nullable Object object, IErrorCode message) {
+    public static void notNull( Object object, IErrorCode message) {
         if (object == null) {
             throw new LeoException(message);
         }
     }
 
-    public static void notEmpty(@Nullable Object[] array, IErrorCode message) {
+    public static void notEmpty( Object[] array, IErrorCode message) {
         if (ArrayUtil.isEmpty(array)) {
             throw new LeoException(message);
         }
     }
 
 
-    public static void noNullElements(@Nullable Object[] array, IErrorCode message) {
+    public static void noNullElements( Object[] array, IErrorCode message) {
         if (array != null) {
             Object[] var2 = array;
             int var3 = array.length;
@@ -72,14 +71,14 @@ public class UeatAssert {
     }
 
 
-    public static void notEmpty(@Nullable Collection<?> collection, IErrorCode message) {
+    public static void notEmpty( Collection<?> collection, IErrorCode message) {
         if (CollectionUtil.isEmpty(collection)) {
             throw new LeoException(message);
         }
     }
 
 
-    public static void notEmpty(@Nullable Map<?, ?> map, IErrorCode message) {
+    public static void notEmpty( Map<?, ?> map, IErrorCode message) {
         if (CollectionUtil.isEmpty(map)) {
             throw new LeoException(message);
         }

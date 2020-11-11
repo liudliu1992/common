@@ -10,7 +10,7 @@ public interface IErrorCode {
      * 获取错误代码
      * @return 错误代码
      */
-     String getCode();
+     int getCode();
 
     /**
      * 获取错误消息
